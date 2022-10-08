@@ -1,0 +1,235 @@
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --secondary-bg-color: #2f303a;
+  --opasity-white-color: rgba(255, 255, 255, 0.6);
+  --only-black: #000000;
+  --rare-bg-color: #f5f4fa;
+  --secondary-blue-color: #188ce8;
+  --secondary-border-color: #eeeeee;
+  --primary-btn-color: #f5f4fa;
+}
+/* --Колір Studio #000000 
+-----Колір фону Наша команда #F5F4FA
+-----Колір для посилань у підвалі rgba(255, 255, 255, 0.6)
+*/
+
+/* Класові теги та класи-утіліти */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+}
+.list {
+  list-style: none;
+}
+.title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.link {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* Шапка сторіки */
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+.logo-header {
+  color: var(--only-black);
+}
+.site-nav .link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link:active {
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+.site-contacts .link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+.site-contacts .link:hover,
+.site-contacts .link:focus {
+  color: var(--accent-color);
+}
+/* Герой */
+.hero {
+  background-color: var(--secondary-bg-color);
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.hero-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background: var(--secondary-blue-color);
+}
+
+/* Переваги компанії */
+
+.benefits-title {
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.benefits-el {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+/* Чим ми займаємося */
+/* Поки що тут нічого, але раптом потім буде потрібно, то я собі швидко зможу знайи куди вставити класи для цієї секції */
+
+/* Наша команда */
+.team {
+  background-color: var(--rare-bg-color);
+}
+.team-item {
+  background-color: var(--primary-white-color);
+}
+.team-title,
+.team-el {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.team-title {
+  font-weight: 500;
+}
+.team-el {
+  color: var(--secondary-text-color);
+}
+/* Підвал сторінки */
+.footer {
+  background-color: var(--secondary-bg-color);
+}
+.logo-footer {
+  color: var(--primary-white-color);
+}
+.footer-item > .link {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--opasity-white-color);
+}
+.footer-item > .address-link {
+  color: var(--primary-white-color);
+}
+.footer-item > .link:hover,
+.footer-item > .link:focus {
+  color: var(--accent-color);
+}
+/* Портфоліо */
+
+/* Список з кнопками */
+.portfolio-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: var(--primary-btn-color);
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+/* Список з проектами */
+
+.project-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+.project-el {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
