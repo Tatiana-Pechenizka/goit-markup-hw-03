@@ -58,6 +58,11 @@ body {
   margin: 0 auto;
   outline: 2px solid aquamarine;
 }
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .list {
   list-style: none;
 }
@@ -212,7 +217,6 @@ body {
 .benefits-container {
   display: flex;
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .benefits-list {
@@ -236,10 +240,6 @@ body {
 
 /* --------------------------Чим ми займаємося */
 
-.examples-container {
-  margin-bottom: 94px;
-}
-
 .examples-list {
   display: flex;
   gap: 30px;
@@ -253,11 +253,6 @@ body {
 
 .team {
   background-color: var(--rare-bg-color);
-}
-
-.team-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team-list {
@@ -347,7 +342,7 @@ body {
 .btn-container {
   display: flex;
   align-items: center;
-  margin-top: 94px;
+
   margin-bottom: 34px;
 }
 
@@ -388,7 +383,6 @@ body {
 .project-container {
   display: flex;
   align-items: center;
-  margin-bottom: 94px;
 }
 
 .project-list {
