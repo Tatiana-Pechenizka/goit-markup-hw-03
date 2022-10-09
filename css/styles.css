@@ -16,7 +16,7 @@
 -----Колір для посилань у підвалі rgba(255, 255, 255, 0.6)
 */
 
-/* Класові теги та класи-утіліти */
+/* -----------------------------Reset */
 p,
 h1,
 h2,
@@ -28,8 +28,9 @@ h6 {
 }
 ul,
 ol {
+  list-style: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
 }
 button {
   cursor: pointer;
@@ -43,6 +44,8 @@ img {
   height: auto;
 }
 
+/* --------------------Класові теги та класи-утіліти */
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -51,7 +54,7 @@ body {
 }
 .container {
   width: 1200px;
-  padding: 0px 15 px;
+  padding: 0px 15px;
   margin: 0 auto;
   outline: 2px solid aquamarine;
 }
@@ -63,6 +66,8 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
 }
 .link {
   text-decoration: none;
@@ -80,7 +85,18 @@ body {
   margin: -1px;
 }
 
-/* Шапка сторіки */
+/*------------------------ Шапка сторіки */
+
+.header-container {
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #ececec;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -88,16 +104,28 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  display: inline-block;
+
   color: var(--accent-color);
 }
 .logo-header {
   color: var(--only-black);
+}
+
+.site-nav {
+  display: flex;
+  gap: 50px;
+  margin-left: 93px;
 }
 .site-nav .link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  display: block;
+  padding: 32px 0px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -107,40 +135,71 @@ body {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
+.site-contacts {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+  align-items: center;
+}
 .site-contacts .link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+
+  display: block;
 }
 .site-contacts .link:hover,
 .site-contacts .link:focus {
   color: var(--accent-color);
 }
-/* Герой */
+
+/* ------------------------------------Герой */
+
 .hero {
+  text-align: center;
   background-color: var(--secondary-bg-color);
 }
+
+.hero-container {
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  align-items: center;
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  display: inline-block;
+  margin-bottom: 30px;
+  max-width: 696px;
+
   color: var(--primary-white-color);
 }
+
 .hero-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
   letter-spacing: 0.06em;
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   border-color: transparent;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 .hero-btn:hover,
@@ -148,28 +207,80 @@ body {
   background: var(--secondary-blue-color);
 }
 
-/* Переваги компанії */
+/* ----------------------Переваги компанії */
+
+.benefits-container {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 30px;
+}
 
 .benefits-title {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
+
 .benefits-el {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
-/* Чим ми займаємося */
-/* Поки що тут нічого, але раптом потім буде потрібно, то я собі швидко зможу знайи куди вставити класи для цієї секції */
 
-/* Наша команда */
+/* --------------------------Чим ми займаємося */
+
+.examples-container {
+  margin-bottom: 94px;
+}
+
+.examples-list {
+  display: flex;
+  gap: 30px;
+}
+
+.examples-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+/* ---------------------------------------Наша команда */
+
 .team {
   background-color: var(--rare-bg-color);
 }
+
+.team-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
 .team-item {
+  flex-basis: calc((100% - 90px) / 4);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
   background-color: var(--primary-white-color);
 }
+
+.team-wrap {
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-title,
 .team-el {
   font-size: 16px;
@@ -178,36 +289,75 @@ body {
   letter-spacing: 0.03em;
 }
 .team-title {
+  margin-bottom: 10px;
   font-weight: 500;
 }
 .team-el {
   color: var(--secondary-text-color);
 }
-/* Підвал сторінки */
+
+/* ---------------------------------Підвал сторінки */
+
 .footer {
   background-color: var(--secondary-bg-color);
 }
+
+.footer-container {
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .logo-footer {
   color: var(--primary-white-color);
 }
+
+.footer-list {
+  margin-top: 20px;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-item > .link {
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
+  display: block;
+
   color: var(--opasity-white-color);
 }
+
 .footer-item > .address-link {
   color: var(--primary-white-color);
 }
+
 .footer-item > .link:hover,
 .footer-item > .link:focus {
   color: var(--accent-color);
 }
-/* Портфоліо */
+
+/*--------------------------------------------- Портфоліо */
 
 /* Список з кнопками */
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  margin-top: 94px;
+  margin-bottom: 34px;
+}
+
+.btn-list {
+  display: flex;
+  gap: 8px;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+
 .portfolio-btn {
   font-family: inherit;
   font-weight: 500;
@@ -218,20 +368,63 @@ body {
   background-color: var(--primary-btn-color);
   border-color: transparent;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
+
+  display: inline-block;
+  padding: 6px 22px;
+  min-width: 73px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Список з проектами */
+
+.project-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 94px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.project-item > .link {
+  display: block;
+}
+
+.project-item > .link:hover,
+.project-item > .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-wrap {
+  padding: 20px 24px;
+
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
 
 .project-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
+
   color: var(--primary-text-color);
 }
 .project-el {
