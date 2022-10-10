@@ -92,11 +92,13 @@ body {
 
 /*------------------------ Шапка сторіки */
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
-
-  border-bottom: 1px solid #ececec;
 }
 .header-nav {
   display: flex;
@@ -164,14 +166,15 @@ body {
 
 .hero {
   text-align: center;
-  background-color: var(--secondary-bg-color);
-}
-
-.hero-container {
   padding-left: auto;
   padding-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-color: var(--secondary-bg-color);
+}
+
+.hero-container {
   align-items: center;
 }
 
@@ -214,9 +217,12 @@ body {
 
 /* ----------------------Переваги компанії */
 
+.benefits {
+  padding-top: 94px;
+}
+
 .benefits-container {
   display: flex;
-  padding-top: 94px;
 }
 
 .benefits-list {
@@ -224,7 +230,12 @@ body {
   gap: 30px;
 }
 
+.benefits-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
 .benefits-title {
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -294,20 +305,17 @@ body {
 /* ---------------------------------Підвал сторінки */
 
 .footer {
-  background-color: var(--secondary-bg-color);
-}
-
-.footer-container {
-  align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--secondary-bg-color);
 }
 
 .logo-footer {
   color: var(--primary-white-color);
 }
 
-.footer-list {
+.address {
   margin-top: 20px;
 }
 
@@ -339,18 +347,12 @@ body {
 
 /* Список з кнопками */
 
-.btn-container {
-  display: flex;
-  align-items: center;
-
-  margin-bottom: 34px;
-}
-
 .btn-list {
   display: flex;
   gap: 8px;
   margin: 0 auto;
-  padding-bottom: 16px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
 .portfolio-btn {
@@ -379,11 +381,6 @@ body {
 }
 
 /* Список з проектами */
-
-.project-container {
-  display: flex;
-  align-items: center;
-}
 
 .project-list {
   display: flex;
